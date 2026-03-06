@@ -1,0 +1,65 @@
+.addNote {
+  padding: 15px 25px;
+  margin: 40px auto;
+
+  border-radius: 12px;
+  background-color: rgba(253, 247, 231);
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.214);
+
+  display: grid;
+  gap: 15px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 35px;
+  word-spacing: 1px;
+  letter-spacing: 3px;
+}
+
+.btnDesCon {
+  position: relative;
+}
+
+.noteTitle,
+.noteDescription {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+
+  padding: 20px;
+  resize: none;
+
+  border-radius: 8px;
+  border: 1px solid rgb(211, 197, 161);
+}
+
+.noteTitle:focus,
+.noteDescription:focus {
+  outline: none;
+}
+
+.noteDescription {
+  height: 150px;
+}
+
+.addBtn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 1px solid rgb(237, 182, 55);
+
+  color: white;
+  background: RGBA(248, 200, 87);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 200, 87, 1) 0%,
+    rgb(237, 178, 29) 100%
+  );
+
+  position: absolute;
+  bottom: 13px;
+  right: 7px;
+  cursor: pointer;
+}
