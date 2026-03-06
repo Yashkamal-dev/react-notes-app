@@ -1,9 +1,34 @@
 import React, { useState } from "react";
 import style from "./AddNote.module.css";
+import NoteCard from "../NoteCard/NoteCard";
 
-const AddNote = () => {
+const AddNote = ({ dataInsert }) => {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
+
+  const titleInput = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const noteInput = (e) => {
+    setNote(e.target.value);
+  };
+
+  const addNote = () => {
+    if (title.trim() !== "" && note.trim() !== "") {
+      let newNote = {
+        key: Date.now(),
+        id: "ID" + Date.now(),
+        Title: title,
+        Note: note,
+      };
+
+      dataInsert(newNote);
+
+      setTitle("");
+      setNote("");
+    }
+  };
 
   return (
     <div className={style.addNote}>
@@ -14,6 +39,7 @@ const AddNote = () => {
         className={style.noteTitle}
         placeholder="Title"
         type="text"
+        onChange={titleInput}
       />
 
       <div className={style.btnDesCon}>
@@ -21,8 +47,12 @@ const AddNote = () => {
           value={note}
           className={style.noteDescription}
           placeholder="Take a note..."
+          onChange={noteInput}
         ></textarea>
-        <button className={style.addBtn}>+ Add Note</button>
+
+        <button className={style.addBtn} onClick={addNote}>
+          + Add Note
+        </button>
       </div>
     </div>
   );

@@ -1,16 +1,28 @@
 import React from "react";
 import style from "./NoteCard.module.css";
 
-const NoteCard = () => {
+const NoteCard = (props) => {
+  const toDelete = (e) => {
+    const { dataDelete } = props;
+    const id = e.target.parentElement.id;
+
+    dataDelete(id);
+  };
+
   return (
-    <div className={style.noteCard}>
+    <div id={props.id} className={style.noteCard}>
       <div className={style.titleDesCon}>
-        <h2 className={style.title}>it is a note.</h2>
-        <p className={style.description}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugit!
-        </p>
+        <h2 className={style.title}>{props.title}</h2>
+        <p className={style.description}>{props.note} </p>
       </div>
-      <button className={style.removeBtn}>Delete</button>
+      <button
+        onClick={(e) => {
+          toDelete(e);
+        }}
+        className={style.removeBtn}
+      >
+        Delete
+      </button>
     </div>
   );
 };
