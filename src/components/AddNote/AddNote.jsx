@@ -30,6 +30,12 @@ const AddNote = ({ dataInsert }) => {
     }
   };
 
+  document.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      addNote();
+    }
+  });
+
   return (
     <div className={style.addNote}>
       <h2 className={style.title}>Add a New Note</h2>
