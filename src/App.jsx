@@ -4,7 +4,7 @@ import AddNote from "./components/AddNote/AddNote";
 import NotesList from "./components/Noteslist/NotesList";
 
 const App = () => {
-  if (localStorage.length == 0) {
+  if (localStorage.getItem("notes") == null) {
     localStorage.setItem("notes", JSON.stringify([]));
   }
 
