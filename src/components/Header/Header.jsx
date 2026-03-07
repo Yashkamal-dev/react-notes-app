@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./header.module.css";
+import noteIcon from "../../assets/note-icon.png";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
       <div className={style.title}>
         <img
           className={style.appImage}
-          src="https://play-lh.googleusercontent.com/Td_CKplVJTIATvVJ4Zws3m_5Iv0xWPp76nb0i2XXTYcya7cp2E0QcfM5M1XqsBxsFbc"
+          src={noteIcon}
         ></img>
         <h1 className={style.appName}>Notes App</h1>
       </div>
