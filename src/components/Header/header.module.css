@@ -28,3 +28,50 @@
   font-size: 1.5rem;
   letter-spacing: 1px;
 }
+
+@media (max-width: 1000px) {
+  .header {
+    gap: 10px;
+  }
+
+  .title {
+    gap: 17px;
+  }
+
+  .appImage {
+    height: 40px;
+  }
+
+  .appName {
+    font-size: 2.4em;
+    letter-spacing: 2px;
+  }
+
+  .subTitle {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 530px) {
+  .header {
+    gap: 10px;
+  }
+
+  .title {
+    gap: 12px;
+  }
+
+  .appImage {
+    height: 35px;
+  }
+
+  .appName {
+    font-size: 2.2em;
+    letter-spacing: 1px;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+  }
+}

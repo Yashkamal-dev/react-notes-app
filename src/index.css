@@ -27,5 +27,18 @@ body {
 }
 
 .app {
-  width: 900px;
+  max-width: 1300px;
+  width: 80vw;
+}
+
+@media (max-width: 1000px) {
+  .app {
+    width: 85vw;
+  }
+}
+
+@media (max-width: 530px) {
+  .app {
+    width: 90vw;
+  }
 }
